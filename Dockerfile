@@ -5,3 +5,6 @@ RUN install-php-extensions pdo_mysql mysqli
 WORKDIR /app
 
 COPY . .
+
+ENV FRANKENPHP_DOCUMENT_ROOT=/app
+ENV SERVER_NAME=:8080
