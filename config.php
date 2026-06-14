@@ -23,11 +23,25 @@ if (!function_exists('env')) {
         }
     }
 
-    function env($key, $default = null) {
-        $val = getenv($key);
-        if ($val === false) {
-            return $_ENV[$key] ?? $default;
+    function env(string $key, string $default = ''): string {
+        // Primero busca en variables de entorno del servidor (Railway, etc)
+        $serverVal = getenv($key);
+        if ($serverVal !== false) return $serverVal;
+
+        // Luego busca en .env local
+        static $vars = null;
+        if ($vars === null) {
+            $vars = [];
+            $file = __DIR__ . '/.env';
+            if (file_exists($file)) {
+                foreach (file($file, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES) as $line) {
+                    if (str_starts_with(trim($line), '#')) continue;
+                    [$k, $v] = explode('=', $line, 2);
+                    $vars[trim($k)] = trim($v);
+                }
+            }
         }
-        return $val;
+
+        return $vars[$key] ?? $default;
     }
 }
