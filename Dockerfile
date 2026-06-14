@@ -6,6 +6,7 @@ WORKDIR /app
 
 COPY . .
 
-ENV FRANKENPHP_DOCUMENT_ROOT=/app
+RUN ln -s /app /app/public
+
 ENV SERVER_NAME=:8080
 ENV APP_ENV=production
