@@ -1,12 +1,12 @@
 <?php
+require_once __DIR__ . '/../config.php';
+$host = env('DB_HOST');
+$port = env('DB_PORT');
+$dbname = env('DB_NAME');
+$user = env('DB_USER');
+$pass = env('DB_PASS');
 
-$host = "127.0.0.1";
-$port = "3307";
-$dbname = "aventuring";
-$user = "root";
-$pass = "";
-
-try{
+try {
 
     $pdo = new PDO(
         "mysql:host=$host;port=$port;dbname=$dbname;charset=utf8mb4",
@@ -19,7 +19,7 @@ try{
         PDO::ERRMODE_EXCEPTION
     );
 
-}catch(PDOException $e){
+} catch (PDOException $e) {
 
     die($e->getMessage());
 
