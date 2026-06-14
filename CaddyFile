@@ -4,5 +4,8 @@
 
 :8080 {
     root * /app
-    php_server
+    encode zstd br gzip
+    php_server {
+        index index.php
+    }
 }
