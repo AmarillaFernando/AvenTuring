@@ -1,4 +1,13 @@
-<section class="dashboard">
+<section class="dashboard" id="dashboard">
+
+     <div class="wave-divider flip">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+            <path
+                fill="#7BCC3A"
+                d="M0,32L80,42.7C160,53,320,75,480,80C640,85,800,75,960,64C1120,53,1280,43,1360,37.3L1440,32L1440,120L0,120Z">
+            </path>
+        </svg>
+    </div>
 
     <div class="container">
 

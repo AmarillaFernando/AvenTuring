@@ -39,7 +39,7 @@ $stmt->execute($params);
 $softwares = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
-<section class="catalog">
+<section class="catalog" id="catalog">
 
     <div class="container">
 
@@ -96,9 +96,9 @@ $softwares = $stmt->fetchAll(PDO::FETCH_ASSOC);
             </p>
             <?php endif; ?>
 
-            <?php foreach($softwares as $software) : ?>
+            <?php foreach($softwares as $index => $software) : ?>
 
-            <div class="software-card">
+            <div class="software-card <?= $index >= 6 ? 'software-hidden' : '' ?>">
 
                 <div class="software-header">
                     <div class="software-badge"><?= $software['licencia'] ?></div>
@@ -134,6 +134,20 @@ $softwares = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <?php endforeach; ?>
 
         </div>
+        <?php if(count($softwares) > 6): ?>
+
+            <div class="catalog-more">
+
+                <button
+                    id="toggleCatalog"
+                    class="software-btn"
+                >
+                    Ver más
+                </button>
+
+            </div>
+
+        <?php endif; ?>
 
     </div>
 

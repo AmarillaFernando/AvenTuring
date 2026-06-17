@@ -22,7 +22,7 @@ $stmt = $pdo->query("
 $comentarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
 $hayMas      = false;
 ?>
-<section class="forum">
+<section class="forum" id="foro">
 
     <div class="container">
 

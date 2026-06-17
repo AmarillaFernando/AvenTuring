@@ -1,13 +1,13 @@
 ﻿<div class="module-page">
 
     <div class="module-banner">
-        🤖 Machine Learning
+        🧬 Algoritmos Genéticos y Computación Evolutiva
     </div>
 
-    <h2>Aprender de datos para hacer predicciones inteligentes</h2>
+    <h2>Resolver problemas inspirados en la evolución</h2>
 
     <p>
-        El Machine Learning es el área que permite a los sistemas aprender de datos sin ser programados con reglas explícitas, usando patrones y ejemplos para generalizar nuevas decisiones.
+        Inspirados en la biología, los algoritmos genéticos son técnicas de búsqueda y optimización basadas en selección natural e herencia genética.
     </p>
 
     <h3>Conceptos Principales</h3>
@@ -15,23 +15,18 @@
     <div class="concept-grid">
 
         <div class="concept-card">
-            <h4>📊 Supervisado vs No Supervisado</h4>
-            <p>El aprendizaje supervisado usa datos etiquetados, mientras que el no supervisado busca estructura en datos sin etiquetas.</p>
+            <h4>👥 Población e Individuos</h4>
+            <p>El sistema genera un conjunto de soluciones potenciales que compiten entre sí como si fueran individuos en una población.</p>
         </div>
 
         <div class="concept-card">
-            <h4>🧠 Modelos y Entrenamiento</h4>
-            <p>Los modelos aprenden ajustando parámetros para minimizar errores sobre ejemplos de entrenamiento.</p>
+            <h4>🏅 Función de Aptitud (Fitness)</h4>
+            <p>Es el criterio que mide qué tan buena es una solución; solo los más aptos sobreviven para la siguiente generación.</p>
         </div>
 
         <div class="concept-card">
-            <h4>✅ Validación y Evaluación</h4>
-            <p>Es clave medir el rendimiento con datos distintos a los de entrenamiento para evitar sobreajuste.</p>
-        </div>
-
-        <div class="concept-card">
-            <h4>🔍 Características</h4>
-            <p>Seleccionar y transformar atributos relevantes ayuda a los modelos a aprender con mayor precisión.</p>
+            <h4>🔄 Operadores Genéticos</h4>
+            <p>Incluyen la cruce (combinar dos soluciones) y la mutación (alterar aleatoriamente partes de la solución).</p>
         </div>
 
     </div>
@@ -39,22 +34,21 @@
     <div class="examples-box">
         <h3>📚 Ejemplos</h3>
         <ul class="module-list">
-            <li><strong>Clasificación de Imágenes:</strong> Identificar objetos en fotos usando redes neuronales o árboles de decisión.</li>
-            <li><strong>Regresión de Precios:</strong> Predecir valores continuos como el precio de una casa a partir de sus características.</li>
+            <li><strong>Optimización de Rutas:</strong> Encontrar el camino más eficiente para el viajante de comercio probando muchas combinaciones evolutivas.</li>
         </ul>
     </div>
 
     <div class="applications-box">
         <h3>🚀 Aplicaciones Actuales</h3>
         <ul class="module-list">
-            <li><strong>Recomendaciones:</strong> Sugerir productos, películas o música basados en el comportamiento del usuario.</li>
-            <li><strong>Detección de Fraudes:</strong> Analizar transacciones para identificar patrones sospechosos.</li>
+            <li><strong>Diseño Industrial:</strong> Optimización de formas aerodinámicas o estructuras complejas.</li>
+            <li><strong>Bioinformática:</strong> Alineamiento de secuencias de ADN y modelado de proteínas.</li>
         </ul>
     </div>
 
     <div class="didyouknow-box">
         <h3>💡 ¿Sabías que?</h3>
-        <p>El aprendizaje automático transforma datos en decisiones sin escribir reglas explícitas, usando en cambio ejemplos y experiencias previas.</p>
+        <p>Al igual que en la naturaleza, estas soluciones evolucionan con el tiempo y pueden encontrar respuestas óptimas en espacios de búsqueda donde el humano no sabría por dónde empezar.</p>
     </div>
 
     <div class="module-catalog">

@@ -26,30 +26,6 @@ require_once __DIR__ . '/../data/modulos.php';
                 <p>Sistemas capaces de representar conocimiento y tomar decisiones especializadas.</p>
             </a>
 
-            <a href="modules/index.php?modulo=agentes-inteligentes" class="module-card">
-                <div class="module-icon">⚡</div>
-                <h3>Agentes Inteligentes</h3>
-                <p>Entidades autónomas que perciben su entorno y actúan inteligentemente.</p>
-            </a>
-
-            <a href="modules/index.php?modulo=formalizacion" class="module-card">
-                <div class="module-icon">🔢</div>
-                <h3>Formalización y Abstracción</h3>
-                <p>Definición de estados, operadores y espacios de búsqueda en problemas de IA.</p>
-            </a>
-
-            <a href="modules/index.php?modulo=busqueda" class="module-card">
-                <div class="module-icon">🔍</div>
-                <h3>Estrategias de Búsqueda</h3>
-                <p>Algoritmos informados y no informados para resolución de problemas.</p>
-            </a>
-
-            <a href="modules/index.php?modulo=machine-learning" class="module-card">
-                <div class="module-icon">🤖</div>
-                <h3>Machine Learning</h3>
-                <p>Aprende cómo los sistemas inteligentes identifican patrones y toman decisiones automáticamente.</p>
-            </a>
-
             <a href="modules/index.php?modulo=modelos-aprendizaje" class="module-card">
                 <div class="module-icon">📊</div>
                 <h3>Modelos de Aprendizaje</h3>
@@ -68,29 +44,63 @@ require_once __DIR__ . '/../data/modulos.php';
                 <p>Procesamiento de Lenguaje Natural, reconocimiento de patrones y representación del conocimiento.</p>
             </a>
 
-            <a href="modules/index.php?modulo=sistemas-expertos" class="module-card">
+            <a href="modules/index.php?modulo=redes-neuronales" class="module-card">
+                <div class="module-icon">🧠</div>
+                <h3>Redes Neuronales</h3>
+                <p>Arquitecturas inspiradas en el cerebro para reconocer patrones complejos.</p>
+            </a>
+
+            <a href="modules/index.php?modulo=formalizacion" class="module-card">
+                <div class="module-icon">🔢</div>
+                <h3>Formalización y Abstracción</h3>
+                <p>Definición de estados, operadores y espacios de búsqueda en problemas de IA.</p>
+            </a>
+
+            <a href="modules/index.php?modulo=busqueda" class="module-card module-hidden">
+                <div class="module-icon">🔍</div>
+                <h3>Estrategias de Búsqueda</h3>
+                <p>Algoritmos informados y no informados para resolución de problemas.</p>
+            </a>
+
+            <a href="modules/index.php?modulo=machine-learning" class="module-card module-hidden">
+                <div class="module-icon">🤖</div>
+                <h3>Machine Learning</h3>
+                <p>Aprende cómo los sistemas inteligentes identifican patrones y toman decisiones automáticamente.</p>
+            </a>
+
+            <a href="modules/index.php?modulo=sistemas-expertos" class="module-card module-hidden">
                 <div class="module-icon">🧠</div>
                 <h3>Sistemas Expertos</h3>
                 <p>Base de conocimientos, base de hechos y motor de inferencia.</p>
             </a>
 
-            <a href="modules/index.php?modulo=logica-borrosa" class="module-card">
+            <a href="modules/index.php?modulo=logica-borrosa" class="module-card module-hidden">
                 <div class="module-icon">🌫️</div>
                 <h3>Lógica Borrosa</h3>
                 <p>Tratamiento de la incertidumbre mediante grados de pertenencia.</p>
             </a>
 
-            <a href="modules/index.php?modulo=algoritmos-geneticos" class="module-card">
+            <a href="modules/index.php?modulo=algoritmos-geneticos" class="module-card module-hidden">
                 <div class="module-icon">🧬</div>
                 <h3>Algoritmos Genéticos</h3>
                 <p>Computación evolutiva basada en selección natural, cruce y mutación.</p>
             </a>
 
-            <a href="modules/index.php?modulo=big-data" class="module-card">
+            <a href="modules/index.php?modulo=big-data" class="module-card module-hidden">
                 <div class="module-icon">💾</div>
                 <h3>Big Data</h3>
                 <p>La pirámide DICS aplicada al procesamiento de datos a gran escala.</p>
             </a>
+
+        </div>
+        <div class="modules-more">
+
+            <button
+                id="toggleModules"
+                class="software-btn"
+            >
+                Ver más módulos
+            </button>
 
         </div>
 

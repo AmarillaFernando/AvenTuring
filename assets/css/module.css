@@ -655,3 +655,15 @@
         grid-template-columns: 1fr;
     }
 }
+.module-hidden{
+    display:none;
+}
+
+.modules-more{
+
+    margin-top:40px;
+
+    display:flex;
+
+    justify-content:center;
+}

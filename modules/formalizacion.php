@@ -1,13 +1,13 @@
 ﻿<div class="module-page">
 
     <div class="module-banner">
-        🤖 Machine Learning
+        🔢 Formalización y Abstracción
     </div>
 
-    <h2>Aprender de datos para hacer predicciones inteligentes</h2>
+    <h2>Convertir problemas en estructuras que la IA pueda resolver</h2>
 
     <p>
-        El Machine Learning es el área que permite a los sistemas aprender de datos sin ser programados con reglas explícitas, usando patrones y ejemplos para generalizar nuevas decisiones.
+        La formalización es el proceso de transformar un problema real en una representación matemática o lógica que una IA puede procesar eficientemente.
     </p>
 
     <h3>Conceptos Principales</h3>
@@ -15,23 +15,23 @@
     <div class="concept-grid">
 
         <div class="concept-card">
-            <h4>📊 Supervisado vs No Supervisado</h4>
-            <p>El aprendizaje supervisado usa datos etiquetados, mientras que el no supervisado busca estructura en datos sin etiquetas.</p>
+            <h4>🧩 Estados y Operadores</h4>
+            <p>Un problema se define por estados posibles y las acciones que permiten pasar de un estado a otro.</p>
         </div>
 
         <div class="concept-card">
-            <h4>🧠 Modelos y Entrenamiento</h4>
-            <p>Los modelos aprenden ajustando parámetros para minimizar errores sobre ejemplos de entrenamiento.</p>
+            <h4>🗺️ Espacio de Búsqueda</h4>
+            <p>Es el conjunto de todos los estados posibles; cuanto más grande sea, más difícil será encontrar la solución.</p>
         </div>
 
         <div class="concept-card">
-            <h4>✅ Validación y Evaluación</h4>
-            <p>Es clave medir el rendimiento con datos distintos a los de entrenamiento para evitar sobreajuste.</p>
+            <h4>🧠 Heurísticas</h4>
+            <p>Son reglas prácticas que guían la búsqueda hacia soluciones más prometedoras sin explorar todo el espacio.</p>
         </div>
 
         <div class="concept-card">
-            <h4>🔍 Características</h4>
-            <p>Seleccionar y transformar atributos relevantes ayuda a los modelos a aprender con mayor precisión.</p>
+            <h4>🧱 Abstracción</h4>
+            <p>Reducir un problema a sus elementos esenciales permite que la IA trabaje con una versión más manejable.</p>
         </div>
 
     </div>
@@ -39,22 +39,22 @@
     <div class="examples-box">
         <h3>📚 Ejemplos</h3>
         <ul class="module-list">
-            <li><strong>Clasificación de Imágenes:</strong> Identificar objetos en fotos usando redes neuronales o árboles de decisión.</li>
-            <li><strong>Regresión de Precios:</strong> Predecir valores continuos como el precio de una casa a partir de sus características.</li>
+            <li><strong>Laberintos:</strong> Representar posiciones, movimientos y metas como estados para encontrar la salida.</li>
+            <li><strong>Planificación Logística:</strong> Modelar envíos y rutas para optimizar tiempo y recursos.</li>
         </ul>
     </div>
 
     <div class="applications-box">
         <h3>🚀 Aplicaciones Actuales</h3>
         <ul class="module-list">
-            <li><strong>Recomendaciones:</strong> Sugerir productos, películas o música basados en el comportamiento del usuario.</li>
-            <li><strong>Detección de Fraudes:</strong> Analizar transacciones para identificar patrones sospechosos.</li>
+            <li><strong>Robótica:</strong> Robots que formalizan entornos y tareas para moverse y manipular objetos.</li>
+            <li><strong>Juegos:</strong> Modelar tableros y jugadas para que la IA encuentre estrategias ganadoras.</li>
         </ul>
     </div>
 
     <div class="didyouknow-box">
         <h3>💡 ¿Sabías que?</h3>
-        <p>El aprendizaje automático transforma datos en decisiones sin escribir reglas explícitas, usando en cambio ejemplos y experiencias previas.</p>
+        <p>Una buena formalización puede reducir un problema complejo a una búsqueda eficiente en un espacio mucho más pequeño.</p>
     </div>
 
     <div class="module-catalog">

@@ -77,6 +77,20 @@ require_once __DIR__ . '/../data/modulos.php';
     <!-- Lista de módulos para el JS -->
     <script>
         window.MODULOS = <?= json_encode($modulos) ?>;
+        (function(){
+            const params = new URLSearchParams(window.location.search);
+            const modulo = params.get('modulo');
+            if (!modulo) return;
+
+            const fd = new URLSearchParams();
+            fd.append('modulo', modulo);
+            fetch('../api/modulo-vista.php', { method: 'POST', body: fd });
+            window.MODULO_VIEW_COUNTED = modulo;
+
+            const historial = JSON.parse(localStorage.getItem('modulosVisitados') ?? '[]');
+            const nuevoHistorial = [modulo, ...historial.filter(s => s !== modulo)].slice(0, 10);
+            localStorage.setItem('modulosVisitados', JSON.stringify(nuevoHistorial));
+        })();
     </script>
 
     <script src="../assets/js/animations.js"></script>

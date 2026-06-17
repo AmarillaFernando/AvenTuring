@@ -388,11 +388,17 @@ document.addEventListener('click', async (e) => {
 
     const moduleFiles = {
         'fundamentos': 'fundamentos.php',
-        'agentes-inteligentes': 'agentes-inteligentes.php',
+        'modelos-aprendizaje': 'modelos-aprendizaje.php',
+        'aprendizaje-reforzado': 'aprendizaje-reforzado.php',
+        'formalizacion': 'formalizacion.php',
+        'busqueda': 'busqueda.php',
         'machine-learning': 'machine-learning.php',
-        'percepcion-pln': 'nlp.php',
         'redes-neuronales': 'redes-neuronales.php',
-        'sistemas-expertos': 'sistemas-expertos.php'
+        'percepcion-pln': 'nlp.php',
+        'sistemas-expertos': 'sistemas-expertos.php',
+        'logica-borrosa': 'logica-borrosa.php',
+        'algoritmos-geneticos': 'algoritmos-geneticos.php',
+        'big-data': 'big-data.php'
     };
 
     // ── Cargar un módulo ──────────────────────────────────
@@ -429,9 +435,12 @@ document.addEventListener('click', async (e) => {
         main.innerHTML = html;
 
         // Registrar vista
-        const fd = new FormData();
-        fd.append('modulo', slug);
-        fetch(`${apiBase}modulo-vista.php`, { method: 'POST', body: fd });
+        if (window.MODULO_VIEW_COUNTED !== slug) {
+            const fd = new FormData();
+            fd.append('modulo', slug);
+            fetch(`${apiBase}modulo-vista.php`, { method: 'POST', body: fd });
+            window.MODULO_VIEW_COUNTED = slug;
+        }
 
         // Cargar catálogo y comentarios en paralelo
         clearCommentPagination();
@@ -584,8 +593,13 @@ document.addEventListener('click', async (e) => {
         dropdown.querySelectorAll('.nav-dropdown-item').forEach(item => {
             item.addEventListener('click', () => {
                 dropdown.classList.remove('nav-dropdown--active');
-                cargarModulo(item.dataset.modulo);
-                window.location.href = 'modules/index.php';
+                const slug = item.dataset.modulo;
+                cargarModulo(slug);
+                if (window.location.pathname.includes('/modules/')) {
+                    history.replaceState(null, '', `?modulo=${encodeURIComponent(slug)}`);
+                } else {
+                    window.location.href = `modules/index.php?modulo=${encodeURIComponent(slug)}`;
+                }
             });
         });
 
@@ -794,13 +808,13 @@ document.addEventListener('click', async (e) => {
 
     const MODULOS_DATA = {
         'fundamentos':           { nombre: 'Fundamentos IA',              icono: '📚' },
-        'agentes-inteligentes':  { nombre: 'Agentes Inteligentes',        icono: '⚡' },
-        'formalizacion':         { nombre: 'Formalización y Abstracción', icono: '🔢' },
-        'busqueda':              { nombre: 'Estrategias de Búsqueda',     icono: '🔍' },
-        'machine-learning':      { nombre: 'Machine Learning',            icono: '🤖' },
         'modelos-aprendizaje':   { nombre: 'Modelos de Aprendizaje',      icono: '📊' },
         'aprendizaje-reforzado': { nombre: 'Aprendizaje Reforzado',       icono: '🎮' },
         'percepcion-pln':        { nombre: 'Percepción y PLN',            icono: '💬' },
+        'redes-neuronales':      { nombre: 'Redes Neuronales',           icono: '🧠' },
+        'formalizacion':         { nombre: 'Formalización y Abstracción', icono: '🔢' },
+        'busqueda':              { nombre: 'Estrategias de Búsqueda',     icono: '🔍' },
+        'machine-learning':      { nombre: 'Machine Learning',            icono: '🤖' },
         'sistemas-expertos':     { nombre: 'Sistemas Expertos',           icono: '🧠' },
         'logica-borrosa':        { nombre: 'Lógica Borrosa',              icono: '🌫️' },
         'algoritmos-geneticos':  { nombre: 'Algoritmos Genéticos',        icono: '🧬' },
@@ -812,7 +826,8 @@ document.addEventListener('click', async (e) => {
         : MODULOS_DATA;
 
     const isModulesPage = !!document.getElementById('moduleMain');
-    const base = isModulesPage ? 'index.php' : 'modules/index.php';
+    if (isModulesPage) return;
+    const base = 'modules/index.php';
 
     const navModulos = document.querySelector('a[data-nav="modulos"]');
     if (!navModulos) return;
@@ -1122,7 +1137,6 @@ document.addEventListener('click', async (e) => {
 })();
 /* ===========================
    DASHBOARD
-   Pegá este bloque al final de app.js
    =========================== */
 
 (function () {
@@ -1135,14 +1149,14 @@ document.addEventListener('click', async (e) => {
 
     const MODULOS_NOMBRES = {
         'fundamentos':           { nombre: 'Fundamentos IA',              icono: '📚' },
-        'agentes-inteligentes':  { nombre: 'Agentes Inteligentes',        icono: '⚡' },
-        'formalizacion':         { nombre: 'Formalización y Abstracción', icono: '🔢' },
-        'busqueda':              { nombre: 'Estrategias de Búsqueda',     icono: '🔍' },
-        'machine-learning':      { nombre: 'Machine Learning',            icono: '🤖' },
         'modelos-aprendizaje':   { nombre: 'Modelos de Aprendizaje',      icono: '📊' },
         'aprendizaje-reforzado': { nombre: 'Aprendizaje Reforzado',       icono: '🎮' },
         'percepcion-pln':        { nombre: 'Percepción y PLN',            icono: '💬' },
-        'sistemas-expertos':     { nombre: 'Sistemas Expertos',           icono: '🧠' },
+        'redes-neuronales':      { nombre: 'Redes Neuronales',           icono: '🧠' },
+        'formalizacion':         { nombre: 'Formalización y Abstracción', icono: '🔢' },
+        'busqueda':              { nombre: 'Estrategias de Búsqueda',     icono: '🔍' },
+        'machine-learning':      { nombre: 'Machine Learning',            icono: '🤖' },
+        'sistemas-expertos':     { nombre: 'Sistemas Expertos',           icono: '💻' },
         'logica-borrosa':        { nombre: 'Lógica Borrosa',              icono: '🌫️' },
         'algoritmos-geneticos':  { nombre: 'Algoritmos Genéticos',        icono: '🧬' },
         'big-data':              { nombre: 'Big Data',                    icono: '💾' },
@@ -1151,8 +1165,26 @@ document.addEventListener('click', async (e) => {
     // ── Actividad reciente desde localStorage ────────────
     async function cargarActividad() {
         try {
-            const res  = await fetch('api/estadisticas.php?tipo=populares');
-            const data = await res.json();
+            const historial = JSON.parse(localStorage.getItem('modulosVisitados') ?? '[]');
+            let data = [];
+
+            if (Array.isArray(historial) && historial.length > 0) {
+                const res = await fetch('api/estadisticas.php?tipo=populares&limit=12');
+                const todos = await res.json();
+                const mapa = todos.reduce((map, item) => {
+                    map[item.id] = item;
+                    return map;
+                }, {});
+
+                data = historial
+                    .map(slug => mapa[slug])
+                    .filter(Boolean);
+            }
+
+            if (!data.length) {
+                const res  = await fetch('api/estadisticas.php?tipo=populares');
+                data = await res.json();
+            }
 
             if (!data.length) {
                 activityList.innerHTML = '<div class="activity-item activity-empty">Sin actividad todavía.</div>';
@@ -1252,7 +1284,7 @@ document.addEventListener('click', async (e) => {
     // Se llama desde el IIFE de módulos al cargar cada uno
     window.registrarVisitaLocal = function (slug) {
         let historial = JSON.parse(localStorage.getItem('modulosVisitados') ?? '[]');
-        historial = [slug, ...historial.filter(s => s !== slug)].slice(0, 10);
+        historial = [slug, ...historial.filter(s => s !== slug)].slice(0, 6);
         localStorage.setItem('modulosVisitados', JSON.stringify(historial));
     };
 
@@ -1306,3 +1338,95 @@ document.addEventListener('click', async (e) => {
     cargarStats();
 
 })();
+document.addEventListener('click',(e)=>{
+
+    if(e.target.id !== 'toggleCatalog'){
+        return;
+    }
+
+    const ocultos =
+        document.querySelectorAll(
+            '.software-hidden'
+        );
+
+    let contador = 0;
+
+    ocultos.forEach(card => {
+
+        if(contador < 6){
+
+            card.style.display = 'block';
+
+            card.classList.remove(
+                'software-hidden'
+            );
+
+            contador++;
+
+        }
+
+    });
+
+    const restantes =
+        document.querySelectorAll(
+            '.software-hidden'
+        );
+
+    if(restantes.length === 0){
+
+        e.target.remove();
+
+    }
+
+});
+document.addEventListener('click',(e)=>{
+
+    if(e.target.id !== 'toggleModules'){
+        return;
+    }
+
+    const ocultos =
+        document.querySelectorAll(
+            '.modules-grid .module-hidden'
+        );
+
+    const expandido =
+        e.target.dataset.expanded === 'true';
+
+    if(!expandido){
+
+        ocultos.forEach(card => {
+
+            card.style.display = 'block';
+
+        });
+
+        e.target.textContent =
+            'Ver menos módulos';
+
+        e.target.dataset.expanded =
+            'true';
+
+    }else{
+
+        ocultos.forEach(card => {
+
+            card.style.display = 'none';
+
+        });
+
+        e.target.textContent =
+            'Ver más módulos';
+
+        e.target.dataset.expanded =
+            'false';
+
+        document
+            .querySelector('.modules')
+            .scrollIntoView({
+                behavior:'smooth'
+            });
+
+    }
+
+});

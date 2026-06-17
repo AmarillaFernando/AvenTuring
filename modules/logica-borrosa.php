@@ -1,13 +1,13 @@
 ﻿<div class="module-page">
 
     <div class="module-banner">
-        🤖 Machine Learning
+        🌫️ Lógica Borrosa (Fuzzy Logic)
     </div>
 
-    <h2>Aprender de datos para hacer predicciones inteligentes</h2>
+    <h2>Imprecisión como ventaja para sistemas inteligentes</h2>
 
     <p>
-        El Machine Learning es el área que permite a los sistemas aprender de datos sin ser programados con reglas explícitas, usando patrones y ejemplos para generalizar nuevas decisiones.
+        La lógica borrosa no resuelve problemas nuevos, sino que utiliza métodos diferentes para enfrentar incertidumbre o imprecisión. A diferencia de la lógica binaria, admite grados intermedios entre verdadero y falso.
     </p>
 
     <h3>Conceptos Principales</h3>
@@ -15,23 +15,18 @@
     <div class="concept-grid">
 
         <div class="concept-card">
-            <h4>📊 Supervisado vs No Supervisado</h4>
-            <p>El aprendizaje supervisado usa datos etiquetados, mientras que el no supervisado busca estructura en datos sin etiquetas.</p>
+            <h4>🎯 Tratamiento de la Imprecisión</h4>
+            <p>En lugar de manejar datos exactos, la lógica borrosa utiliza conceptos como "es alto con un grado de pertenencia de 0.8".</p>
         </div>
 
         <div class="concept-card">
-            <h4>🧠 Modelos y Entrenamiento</h4>
-            <p>Los modelos aprenden ajustando parámetros para minimizar errores sobre ejemplos de entrenamiento.</p>
+            <h4>📈 Funciones de Pertenencia</h4>
+            <p>Son valores que determinan el grado en que un elemento pertenece a un conjunto borroso.</p>
         </div>
 
         <div class="concept-card">
-            <h4>✅ Validación y Evaluación</h4>
-            <p>Es clave medir el rendimiento con datos distintos a los de entrenamiento para evitar sobreajuste.</p>
-        </div>
-
-        <div class="concept-card">
-            <h4>🔍 Características</h4>
-            <p>Seleccionar y transformar atributos relevantes ayuda a los modelos a aprender con mayor precisión.</p>
+            <h4>🔧 Flexibilidad</h4>
+            <p>Es fácil transformar un sistema borroso añadiendo o eliminando reglas sin tener que empezar el desarrollo desde cero.</p>
         </div>
 
     </div>
@@ -39,22 +34,21 @@
     <div class="examples-box">
         <h3>📚 Ejemplos</h3>
         <ul class="module-list">
-            <li><strong>Clasificación de Imágenes:</strong> Identificar objetos en fotos usando redes neuronales o árboles de decisión.</li>
-            <li><strong>Regresión de Precios:</strong> Predecir valores continuos como el precio de una casa a partir de sus características.</li>
+            <li><strong>Sistemas de Control:</strong> Climatizadores que ajustan la potencia según la sensación térmica en lugar de solo la temperatura exacta.</li>
         </ul>
     </div>
 
     <div class="applications-box">
         <h3>🚀 Aplicaciones Actuales</h3>
         <ul class="module-list">
-            <li><strong>Recomendaciones:</strong> Sugerir productos, películas o música basados en el comportamiento del usuario.</li>
-            <li><strong>Detección de Fraudes:</strong> Analizar transacciones para identificar patrones sospechosos.</li>
+            <li><strong>Electrodomésticos:</strong> Lavarropas inteligentes que detectan el nivel de suciedad para optimizar agua y energía.</li>
+            <li><strong>Enfoques Híbridos:</strong> Combinan lógica borrosa con control industrial clásico para mejorar la estabilidad.</li>
         </ul>
     </div>
 
     <div class="didyouknow-box">
         <h3>💡 ¿Sabías que?</h3>
-        <p>El aprendizaje automático transforma datos en decisiones sin escribir reglas explícitas, usando en cambio ejemplos y experiencias previas.</p>
+        <p>La lógica borrosa se construye sobre la experiencia de expertos humanos, confiando en la descripción lingüística que ellos hacen del sistema.</p>
     </div>
 
     <div class="module-catalog">

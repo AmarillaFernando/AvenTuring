@@ -1,13 +1,13 @@
 ﻿<div class="module-page">
 
     <div class="module-banner">
-        🤖 Machine Learning
+        🔍 Estrategias de Búsqueda
     </div>
 
-    <h2>Aprender de datos para hacer predicciones inteligentes</h2>
+    <h2>Encontrar soluciones en espacios grandes y complejos</h2>
 
     <p>
-        El Machine Learning es el área que permite a los sistemas aprender de datos sin ser programados con reglas explícitas, usando patrones y ejemplos para generalizar nuevas decisiones.
+        Las estrategias de búsqueda son algoritmos que exploran posibles estados hasta encontrar una solución válida o óptima.
     </p>
 
     <h3>Conceptos Principales</h3>
@@ -15,23 +15,23 @@
     <div class="concept-grid">
 
         <div class="concept-card">
-            <h4>📊 Supervisado vs No Supervisado</h4>
-            <p>El aprendizaje supervisado usa datos etiquetados, mientras que el no supervisado busca estructura en datos sin etiquetas.</p>
+            <h4>🧭 Búsqueda No Informada</h4>
+            <p>Explora el espacio sin información adicional sobre la meta, como BFS o DFS.</p>
         </div>
 
         <div class="concept-card">
-            <h4>🧠 Modelos y Entrenamiento</h4>
-            <p>Los modelos aprenden ajustando parámetros para minimizar errores sobre ejemplos de entrenamiento.</p>
+            <h4>🚀 Búsqueda Informada</h4>
+            <p>Usa heurísticas para estimar qué caminos son más prometedores, como A*.</p>
         </div>
 
         <div class="concept-card">
-            <h4>✅ Validación y Evaluación</h4>
-            <p>Es clave medir el rendimiento con datos distintos a los de entrenamiento para evitar sobreajuste.</p>
+            <h4>⚖️ Exploración vs Explotación</h4>
+            <p>Equilibrar buscar nuevas opciones con aprovechar las soluciones ya conocidas.</p>
         </div>
 
         <div class="concept-card">
-            <h4>🔍 Características</h4>
-            <p>Seleccionar y transformar atributos relevantes ayuda a los modelos a aprender con mayor precisión.</p>
+            <h4>🏁 Óptimo y Costo</h4>
+            <p>El algoritmo puede priorizar la solución más rápida o la de menor costo, dependiendo del problema.</p>
         </div>
 
     </div>
@@ -39,22 +39,22 @@
     <div class="examples-box">
         <h3>📚 Ejemplos</h3>
         <ul class="module-list">
-            <li><strong>Clasificación de Imágenes:</strong> Identificar objetos en fotos usando redes neuronales o árboles de decisión.</li>
-            <li><strong>Regresión de Precios:</strong> Predecir valores continuos como el precio de una casa a partir de sus características.</li>
+            <li><strong>BFS y A*:</strong> Métodos para recorrer grafos y encontrar rutas eficientes.</li>
+            <li><strong>Backtracking:</strong> Buscar soluciones probando opciones y retrocediendo ante callejones sin salida.</li>
         </ul>
     </div>
 
     <div class="applications-box">
         <h3>🚀 Aplicaciones Actuales</h3>
         <ul class="module-list">
-            <li><strong>Recomendaciones:</strong> Sugerir productos, películas o música basados en el comportamiento del usuario.</li>
-            <li><strong>Detección de Fraudes:</strong> Analizar transacciones para identificar patrones sospechosos.</li>
+            <li><strong>IA de Juegos:</strong> Encontrar movimientos ganadores o rutas óptimas en escenarios complejos.</li>
+            <li><strong>Navegación Autónoma:</strong> Permite que robots y vehículos busquen rutas seguras y eficientes.</li>
         </ul>
     </div>
 
     <div class="didyouknow-box">
         <h3>💡 ¿Sabías que?</h3>
-        <p>El aprendizaje automático transforma datos en decisiones sin escribir reglas explícitas, usando en cambio ejemplos y experiencias previas.</p>
+        <p>A* es uno de los algoritmos más populares porque combina costo real y heurística, logrando rutas eficientes sin explorar todo el espacio.</p>
     </div>
 
     <div class="module-catalog">

@@ -1576,3 +1576,18 @@ section{
     align-items: center;
     gap: 8px;
 }
+.software-hidden{
+    display:none;
+}
+
+.catalog-more{
+
+    margin-top:40px;
+
+    display:flex;
+
+    justify-content:center;
+}
+html{
+    scroll-behavior:smooth;
+}
